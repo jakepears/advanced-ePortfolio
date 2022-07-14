@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Pearson</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("Vuqk4dWzU6PLP1Qw6");
+   })();
+</script>
+</head>
+<body>
+    <section id="landing-page">
+        <nav>
+            <figure>
+                <img id="personal-logo" src="./assets/favicon.ico" alt="">
+
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor 
+                    link__hover-effect
+                    link__hover-effect--black">
+                        About
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor 
+                    link__hover-effect
+                    link__hover-effect--black">
+                        Project
+                    </a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="nav__link--anchor 
+                    link__hover-effect
+                    link__hover-effect--black">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav__link click">
+                    <a href="#" class="nav__link--anchor 
+                    link__hover-effect
+                    link__hover-effect--black">
+                    <i class="fas fa-adjust"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+          <div class="header__content">
+            <h1 class="title">Hello</h1>
+                <h1 class="title blue">I'm Jake.</h1>
+                <p class="header__para">I'm a soon-to-be<b class="blue"><span class="title--secondary"> Frontend Software Engineer</b></span> with a strong passion for building web applications with great user experiences. 
+                    <br>Here's a bit more <span class="blue"><b>about me. </b></span>
+                </p>
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/jakepearson123/" target ="_blank" class="social__link click">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/DaCodeWiz" target ="_blank" class="social__link click">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="./assets/Jake Pearson Resume.pdf" target ="_blank" class="social__link click">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+          </div>  
+        </header>
+        <button class="mail__btn click">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click">
+            </div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I'm 20</p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="language__name">HTML5</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contract">Let's have a chat</h3>
+                <h3 class="modal__sub-title modal__sub-title--contract">I'm currently open to new opportunities</h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send over my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message. Talk to you soon
+                </div>
+                <i class="fas fa-times" class="modal__exit click"></i>
+                </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="blue">Projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__Description--title">
+                                    Car Sales Project
+                                </h3>
+                                <h4 class="project__description-sub-title">
+                                    HTML, CSS, JavaScript, React
+                                </h4>
+                                <p class="project__description--para">
+                                    lorem ipsum dolor sit amet, consectetur adip
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+            <figure>
+            <img class="footer__logo--img" src="./assets/logo.svg" alt="">
+        </figure>
+        <div class="footer__social--list">
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+                Github
+            </a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+                LinkedIn
+            </a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+                Contact
+            </a>
+            <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+                Resume
+            </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2022 Jake Pearson</div>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
