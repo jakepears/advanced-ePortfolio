@@ -39,14 +39,14 @@
                         Project
                     </a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="nav__link--anchor 
                     link__hover-effect
                     link__hover-effect--black">
                         Contact
                     </a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContrast()">
                     <a href="#" class="nav__link--anchor 
                     link__hover-effect
                     link__hover-effect--black">
@@ -60,7 +60,7 @@
             <h1 class="title">Hello</h1>
                 <h1 class="title blue">I'm Jake.</h1>
                 <p class="header__para">I'm a soon-to-be<b class="blue"><span class="title--secondary"> Frontend Software Engineer</b></span> with a strong passion for building web applications with great user experiences. 
-                    <br>Here's a bit more <span class="blue"><b>about me. </b></span>
+                    <br>Here's a bit more <span class="blue click"><b onclick="toggleModal()">about me. </b></span>
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/jakepearson123/" target ="_blank" class="social__link click">
@@ -75,7 +75,7 @@
                 </div>
           </div>  
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -131,9 +131,17 @@
                 <div class="modal__overlay modal__overlay--success">
                     Thanks for the message. Talk to you soon
                 </div>
-                <i class="fas fa-times" class="modal__exit click"></i>
                 </div>
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
         <div class="container">
