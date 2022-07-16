@@ -210,7 +210,10 @@ nav,
 
 #landing-page {
     min-height: 100vh;
+    opacity: 1;
+    transition: 400ms 300ms ease;
 }
+
 
 .header {
     position: absolute;

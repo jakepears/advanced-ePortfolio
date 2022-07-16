@@ -74,3 +74,7 @@ function toggleModal() {
 
 
 }
+
+// gsap animation 
+gsap.to(projects, {duration: 2, scrollTo:"#row"});
+ 
