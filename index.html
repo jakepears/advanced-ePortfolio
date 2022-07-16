@@ -18,14 +18,14 @@
 </script>
 </head>
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/favicon.ico" alt="">
 
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="nav__link--anchor 
                     link__hover-effect
                     link__hover-effect--black">
@@ -57,7 +57,7 @@
         </nav>
         <header class="header">
           <div class="header__content">
-            <h1 class="title">Hello</h1>
+            <h1 class="title">Hello,</h1>
                 <h1 class="title blue">I'm Jake.</h1>
                 <p class="header__para">I'm a soon-to-be<b class="blue"><span class="title--secondary"> Frontend Software Engineer</b></span> with a strong passion for building web applications with great user experiences. 
                     <br>Here's a bit more <span class="blue click"><b onclick="toggleModal()">about me. </b></span>
@@ -75,9 +75,11 @@
                 </div>
           </div>  
         </header>
+        <a href="#">        
         <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
+    </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click">
             </div>
@@ -86,7 +88,7 @@
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
                 <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
-                <p class="modal__para">I'm 20</p>
+                <p class="modal__para">I'm a 20 year old computer science major with a passion for building great responsive UI. I spend most of my free time right now learning as much as I can on building a positive and enjoyable user experience through the of languages such as CSS, JavaScript, and React.</p>
                 <div class="modal__languages">
                     <figure class="modal__language">
                         <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
@@ -152,28 +154,47 @@
                 <ul class="project__list">
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="./assets/portfolio site.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__Description--title">
-                                    Car Sales Project
+                                    Previous Portfolio
                                 </h3>
-                                <h4 class="project__description-sub-title">
-                                    HTML, CSS, JavaScript, React
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
                                 </h4>
                                 <p class="project__description--para">
-                                    lorem ipsum dolor sit amet, consectetur adip
+                                    My first portfolio based project, fairly basic with a minimalist and clean look to it.
                                 </p>
                                 <div class="project__description--links">
-                                    <a href="#" class="project__description--link">
+                                    <a href="https://github.com/DaCodeWiz" target="_blank" class="project__description--link">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="#" class="project__description--link">
+                                    <a href="https://dacodewiz.github.io/portfolio-website/" target="_blank" title="Portfolio" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                        </div>
+                        <li class="project">
+                            <div class="project__wrapper">
+                        <img src="./assets/book site.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__Description--title">
+                                    eCommerce Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    eCommerce practice project I did a while ago. It is currently not being hosting online but I will link to the github repository.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/DaCodeWiz/ecommerce-finished" target="_blank" title="Portfolio" class="project__description--link">
                                         <i class="fas fa-link"></i>
                                     </a>
                                 </div>
                             </div>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -186,28 +207,28 @@
             <img class="footer__logo--img" src="./assets/logo.svg" alt="">
         </figure>
         <div class="footer__social--list">
-            <a href="#" class="
+            <a href="#" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
             ">
                 Github
             </a>
-            <a href="#" class="
+            <a href="#" target="_blank" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
             ">
                 LinkedIn
             </a>
-            <a href="#" class="
+            <a href="#" onclick="toggleModal()" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
             ">
                 Contact
             </a>
-            <a href="#" class="
+            <a href="./assets/Jake Pearson Resume.pdf" target="_blank" rel="noopener" class="
             footer__social--link
             link__hover-effect
             link__hover-effect--white
