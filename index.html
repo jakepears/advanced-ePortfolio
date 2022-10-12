@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="path/to/fontawesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src='index.js'></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -17,10 +17,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
      <script src="https://unpkg.com/kursor"></script>
-
-
-</script>
-
 <script type="text/javascript">
    (function(){
       emailjs.init("Vuqk4dWzU6PLP1Qw6")}
@@ -35,7 +31,7 @@
 
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link" onclick="toggleModal()">
+                <li class="nav__link" onclick='toggleModal()'>
                     <a href="#" class="nav__link--anchor 
                     link__hover-effect
                     link__hover-effect--black">
@@ -86,7 +82,7 @@
           </div>  
         </header>
         <a href="#">        
-        <button class="mail__btn click" onclick="toggleModal()">
+        <button class="mail__btn click" onclick={toggleModal()}>
             <i class="fas fa-envelope"></i>
         </button>
     </a>
@@ -249,6 +245,12 @@
         </div>
         <div class="footer__copyright">Copyright &copy; 2022 Jake Pearson</div>
         </div>
+        <script>
+        new kursor({
+            type: 1,
+            removeDefaultCursor: true
+        })
+    </script>
     </div>
     </footer>
     </body>

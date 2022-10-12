@@ -1,8 +1,8 @@
 let isModalOpen = false;
-let contrastToggle = false;
+let contrastToggle = true;
 const scaleFactor = 1 / 25;
 
-function moveBackground(event) {
+export function moveBackground(event) {
     const shapes = document.querySelectorAll(".shape");
     const x = event.clientX * scaleFactor;
     const y = event.clientY * scaleFactor;
@@ -12,9 +12,9 @@ function moveBackground(event) {
       const boolInt = isOdd ? -1 : 1;
       shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 8}deg)`
     }
-  }
+  };
   
-  function toggleContrast() {
+export function toggleContrast() {
     contrastToggle = !contrastToggle;
     if (contrastToggle) {
       document.body.classList += " dark-theme"
@@ -22,19 +22,19 @@ function moveBackground(event) {
     else {
       document.body.classList.remove("dark-theme")
     }
-  }
+  };
 
-function toggleContrast() {
+export function toggleContrast() {
     contrastToggle = !contrastToggle;
     if (contrastToggle) {
-    document.body.classList += " dark-theme"
+    document.body.classList += "dark-theme"
     }
     else {
         document.body.classList.remove("dark-theme");
     }
-}
+};
 
-function contact() {
+export function contact() {
     event.preventDefault();
     const loading = document.querySelector('.modal__overlay--loading')
     const success = document.querySelector('.modal__overlay--success')
@@ -56,10 +56,10 @@ function contact() {
             "The email service is temporarily unavailable. Please contact me directly, jpearsonbusiness@gmail.com"
         );
     });
-}
+};
 
 
-function toggleModal() {
+export function toggleModal() {
     if (isModalOpen){
         isModalOpen = false;
         return document.body.classList.remove("modal--open");
@@ -67,7 +67,7 @@ function toggleModal() {
     isModalOpen = true;
     // toggle modal
     document.body.classList += " modal--open";
-}
+};
 
  
 // Import the functions you need from the SDKs you need
